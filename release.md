@@ -37,7 +37,7 @@ The `Release` workflow (`on: push: tags`) runs four jobs:
 | Job | Runner | Produces |
 |-----|--------|----------|
 | `build` | ubuntu-latest | sdist `pyfortool-<ver>.tar.gz`, wheel, `CHANGELOG.md` |
-| `pyinstaller` (matrix) | ubuntu-latest / ubuntu-24.04-arm | `pyfortool-x86_64`, `pyfortool-aarch64` |
+| `pyinstaller` (matrix) | ubuntu-22.04 / ubuntu-22.04-arm | `pyfortool-x86_64`, `pyfortool-aarch64` |
 | `publish-pypi` | ubuntu-latest | wheel published to Test PyPI |
 | `release` | ubuntu-latest | GitHub Release with all assets attached |
 
