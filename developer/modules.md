@@ -133,6 +133,7 @@ Manages variable declarations for a scope.
 | `checkImplicitNone()` | Check for IMPLICIT NONE |
 | `checkIntent()` | Check INTENT attributes |
 | `checkUnusedLocalVar()` | Find unused variables |
+| `checkKeyDimConsistency()` | Check MERGE-based array dims consistency |
 | `removeUnusedLocalVar()` | Remove unused variables |
 | `addExplicitArrayBounds()` | Expand A(:) to A(lbound:ubound) |
 | `addArrayParentheses()` | Add A to A(:) |
@@ -216,6 +217,7 @@ pft.setFalseIfStmt(['LDEBUG', 'LVERBOSE'], simplify=True)
 | `updateContinuation()` | Handle line continuations |
 | `prettify()` | Full formatting |
 | `minify()` | Compact formatting |
+| `formatModuleUse(upper)` | Order USE statements by module type and alphabetically; uppercase ONLY clause vars |
 
 ### Usage
 

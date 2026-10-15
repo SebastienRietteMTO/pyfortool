@@ -224,6 +224,10 @@ surrounded by spaces...
 
 **--removeEmptyCONTAINS** removes CONTAINS statement when the section is empty
 
+**--formatModuleUse** orders USE declarations by module type (MODD_, MODE_,
+MODI_, MODN_) and alphabetically within each group. Variable names in
+ONLY clauses are converted to uppercase; module names are preserved as-is.
+
 ### Checks
 
 **--checkIMPLICIT=Warn\|Err** if the 'IMPLICIT NONE' statment is missing,
@@ -249,6 +253,11 @@ otherwise issue an error message and raise an exception.
 
 **--checkONLY=Warn\|Err* if a USE statement is not followed by an ONLY clause,
 issue a warning if option is 'Warn'; otherwise issue an error message and raise an exception.
+
+**--checkKeyDim=Warn\|Err** if a variable has MERGE-based array dimensions that
+are inconsistent across scopes (different MERGE content for the same variable
+name), issue a warning if option is 'Warn'; otherwise issue an error message
+and raise an exception.
 
 ### Dealing with statements
 
@@ -475,3 +484,13 @@ Run tests with:
 ```bash
 PYTHONPATH=src pytest tests/ -v
 ```
+
+## Releasing
+
+See [release.md](release.md) for the full release process. In short:
+
+- Bump the version in `src/pyfortool/__init__.py`, commit and push.
+- Push a tag matching the version (e.g. `0.2.21`).
+- The `Release` GitHub Action then builds the sdist, wheel and PyInstaller
+  binaries, generates the changelog, creates the GitHub Release, and publishes
+  the wheel to PyPI.

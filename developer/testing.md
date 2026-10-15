@@ -96,7 +96,7 @@ tests/
 │   ├── TestVarListProperty        # __len__, __getitem__
 │   └── TestVarListShowVarList
 │
-├── test_variables.py              # Variables mixin (23 tests)
+├── test_variables.py              # Variables mixin (27 tests)
 │   ├── TestAttachArraySpecToEntity# DIMENSION to entity
 │   ├── TestCheckImplicitNone      # IMPLICIT NONE check
 │   ├── TestCheckIntent            # INTENT attribute check
@@ -110,7 +110,8 @@ tests/
 │   ├── TestRemoveVarIfUnused
 │   ├── TestAddVar
 │   ├── TestRemoveVar
-│   └── TestRenameVar
+│   ├── TestRenameVar
+│   └── TestCheckKeyDimConsistency    # MERGE-based dims check
 │
 ├── test_statements.py             # Statements mixin (14 tests)
 │   ├── TestRemoveCall             # Remove CALL statements
@@ -122,7 +123,7 @@ tests/
 │   ├── TestIsNodeInProcedure
 │   └── TestIsNodeInCall
 │
-├── test_cosmetics.py              # Cosmetics mixin (16 tests)
+├── test_cosmetics.py              # Cosmetics mixin (23 tests)
 │   ├── TestCosmeticsCase          # upperCase, lowerCase
 │   ├── TestCosmeticsIndent        # indent method
 │   ├── TestCosmeticsComments      # removeComments
@@ -130,7 +131,8 @@ tests/
 │   ├── TestCosmeticsContinuation
 │   ├── TestCosmeticsSpaces
 │   ├── TestCosmeticsIfStatements
-│   └── TestCosmeticsContains
+│   ├── TestCosmeticsContains
+│   └── TestCosmeticsFormatModuleUse  # formatModuleUse
 │
 ├── test_cpp.py                    # Cpp mixin (12 tests)
 │   ├── TestCppApplyIfdef          # #ifdef evaluation
