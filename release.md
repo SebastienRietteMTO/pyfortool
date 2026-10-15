@@ -32,14 +32,23 @@ Release and Test PyPI publication.
 
 ## What the workflow does
 
-The `Release` workflow (`on: push: tags`) runs four jobs:
+The `Release` workflow (`on: push: tags`) runs five jobs:
 
 | Job | Runner | Produces |
 |-----|--------|----------|
+| `tests` | reusable `tests-suite.yml` | Full test suite (pytest matrix, regression, flake8, pylint, docs). Gate for publication/release |
 | `build` | ubuntu-latest | sdist `pyfortool-<ver>.tar.gz`, wheel, `CHANGELOG.md` |
 | `pyinstaller` (matrix) | ubuntu-22.04 / ubuntu-22.04-arm | `pyfortool-x86_64`, `pyfortool-aarch64` |
 | `publish-pypi` | ubuntu-latest | wheel published to Test PyPI |
 | `release` | ubuntu-latest | GitHub Release with all assets attached |
+
+`publish-pypi` and `release` only run if the `tests` job passes (i.e. every job
+in the reusable `tests-suite.yml` workflow succeeds); the release is not created
+and nothing is published otherwise.
+
+The test checks themselves are defined once in `.github/workflows/tests-suite.yml`
+and reused by both `test.yml` (on every push/PR) and `release.yml` (on tag push),
+so there is a single source of truth for the test suite.
 
 ### Changelog
 
