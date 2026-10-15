@@ -2,7 +2,7 @@
 
 This document describes how to cut a release. The `release.yml` GitHub Action
 automates sdist/wheel building, PyInstaller binaries, the changelog, the GitHub
-Release and Test PyPI publication.
+Release and PyPI publication.
 
 ## Release process
 
@@ -39,7 +39,7 @@ The `Release` workflow (`on: push: tags`) runs five jobs:
 | `tests` | reusable `tests-suite.yml` | Full test suite (pytest matrix, regression, flake8, pylint, docs). Gate for publication/release |
 | `build` | ubuntu-latest | sdist `pyfortool-<ver>.tar.gz`, wheel, `CHANGELOG.md` |
 | `pyinstaller` (matrix) | ubuntu-22.04 / ubuntu-22.04-arm | `pyfortool-x86_64`, `pyfortool-aarch64` |
-| `publish-pypi` | ubuntu-latest | wheel published to Test PyPI |
+| `publish-pypi` | ubuntu-latest | wheel published to PyPI |
 | `release` | ubuntu-latest | GitHub Release with all assets attached |
 
 `publish-pypi` and `release` only run if the `tests` job passes (i.e. every job
