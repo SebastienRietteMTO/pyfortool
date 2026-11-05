@@ -565,7 +565,15 @@ Functions</h2>
 </table>
 <p><b>Not typically used directly</b> - use via CLI tools: </p><div class="fragment"><div class="line">pyfortool input.F90 --upperCase --indent</div>
 <div class="line">pyfortool_parallel --tree /path/to/src ...</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md136"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md136"></a>
+Parallel processing and the multiprocessing start method</h2>
+<p><span class="tt">mainParallel()</span> explicitly requests the <span class="tt">fork</span> start method, through a <span class="tt">fork</span> context used for the <span class="tt">TreeManager</span>, the worker pool and the file locks given to <span class="tt">PYFT.setParallel()</span>. The parallel configuration installed by <span class="tt">PYFT.setParallel()</span> (shared tree, locks) is held in class attributes, and child processes can only receive it by inheriting the parent memory. Under <span class="tt">forkserver</span> or <span class="tt">spawn</span> the workers re-import a pristine <span class="tt">PYFT</span> class and would run unconfigured.</p>
+<p>This matters because Python 3.14 made <span class="tt">forkserver</span> the default on Linux. Two consequences for anyone modifying this module:</p>
+<ul>
+<li>Objects handed to a child process (<span class="tt">TreeManager</span>, the pool initializer <span class="tt">poolInit</span>) must stay at module level so they remain picklable. <span class="tt">tests/test_scripting.py</span> guards this.</li>
+<li>Supporting <span class="tt">forkserver</span>/<span class="tt">spawn</span> (and therefore macOS and Windows, where <span class="tt">fork</span> is unavailable or unsafe) would require passing the shared tree and the locks through the pool initializer instead of relying on inheritance.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md137"></a>
 Choosing the Right Module</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -593,7 +601,7 @@ Choosing the Right Module</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Debug/tracing  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="util_8py_source.html">util.py</a></span>  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md137"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md138"></a>
 See Also</h1>
 <ul>
 <li>Also in the Developer's Guide<ul>
