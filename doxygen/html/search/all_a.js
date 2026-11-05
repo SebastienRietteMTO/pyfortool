@@ -2,7 +2,7 @@ var searchData=
 [
   ['file_20analysis_0',['tree.py - Cross-File Analysis',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md125',1,'']]],
   ['file_20dependencies_1',['Tree (Cross-File Dependencies)',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2concepts.html#autotoc_md77',1,'']]],
-  ['file_20operations_2',['file operations',['../index.html#autotoc_md4',1,'Basic File Operations'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md99',1,'pyfortool.py - File Operations']]],
+  ['file_20operations_2',['File Operations',['../index.html#autotoc_md4',1,'Basic File Operations'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md99',1,'pyfortool.py - File Operations']]],
   ['filetoscopes_3',['fileToScopes',['../classpyfortool_1_1tree_1_1Tree.html#a0defab7b2a18e4e78038ede7be9b742a',1,'pyfortool::tree::Tree']]],
   ['find_4',['find',['../classpyfortool_1_1scope_1_1ElementView.html#a1dbaf54daab3dba3a8d608ab623ca736',1,'pyfortool::scope::ElementView']]],
   ['findall_5',['findall',['../classpyfortool_1_1scope_1_1ElementView.html#a16495974c6c803a6a3582bce4c738133',1,'pyfortool::scope::ElementView']]],
@@ -20,5 +20,5 @@ var searchData=
   ['fortran_17',['fortran',['../classpyfortool_1_1pyfortool_1_1PYFT.html#a3d9ef8ae55a381845e6b1098baf5d9be',1,'pyfortool::pyfortool::PYFT']]],
   ['fortran2xml_18',['fortran2xml',['../namespacepyfortool_1_1util.html#a38cababd3c55d251f604d82e2d342eca',1,'pyfortool::util']]],
   ['fromjson_19',['fromJson',['../classpyfortool_1_1tree_1_1Tree.html#a937d659e6df8530a10fc0e973b66ac1d',1,'pyfortool::tree::Tree']]],
-  ['functions_20',['functions',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md129',1,'Functions'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md132',1,'Functions'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md135',1,'Functions']]]
+  ['functions_20',['Functions',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md129',1,'Functions'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md132',1,'Functions'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2modules.html#autotoc_md135',1,'Functions']]]
 ];

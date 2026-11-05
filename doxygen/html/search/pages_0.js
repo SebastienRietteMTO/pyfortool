@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['api_20reference_0',['PyForTool API Reference',['../index.html',1,'']]],
-  ['architecture_20guide_1',['Architecture Guide',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2architecture.html',1,'']]]
+  ['1_20regression_20tests_20examples_0',['1. Regression Tests (examples/)',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2CONTRIBUTING.html#autotoc_md164',1,'']]],
+  ['1_3a_20choose_20the_20right_20module_1',['1: Choose the Right Module',['../md__2home_2runner_2work_2pyfortool_2pyfortool_2doc_2developer_2architecture.html#autotoc_md52',1,'Step 1: Choose the Right Module'],['../md__2home_2runner_2work_2pyfortool_2pyfortool_2CONTRIBUTING.html#autotoc_md173',1,'Step 1: Choose the Right Module']]]
 ];
